@@ -58,13 +58,13 @@ h1 {
   z-index: -1;
 }
 
-.item input[type=radio]:checked+label .icon {
+/* .item input[type=radio]:checked+label .icon {
   transform: rotate(-45deg);
 }
 
 .item input[type=radio]:hover+label .icon {
   transform: rotate(-45deg);
-}
+} */
 
 .item input[type=radio]:active+label .item-line {
   color: var(--color-decor-blue);
@@ -87,11 +87,11 @@ label {
   cursor: pointer;
 }
 
-.item input:hover+label>.meme {
+/* .item input:hover+label>.meme {
   max-height: 20vw;
   margin: 0 auto;
   display: block;
-}
+} */
 
 .item input:checked+label>.meme {
   max-height: 20vw;
@@ -99,11 +99,11 @@ label {
   display: block;
 }
 
-.item:hover input~.meme {
+/* .item:hover input~.meme {
   max-height: 20vw;
   margin: 0 auto;
   display: block;
-}
+} */
 
 .item-line {
   display: flex;
@@ -117,13 +117,51 @@ label {
   visibility: hidden;
 }
 
-.bayan-container:hover .icon {
+/* .bayan-container:hover .icon {
   visibility: visible;
 }
 
 .bayan-container:hover .item {
   color: var(--color--font-accent);
+} */
+
+
+@media (hover: none) {
+  .bayan-container .icon {
+    visibility: visible;
+  }
 }
+
+.item input[type=radio]:checked+label .icon {
+  transform: rotate(-45deg);
+}
+
+.item input[type=radio]:hover+label .icon {
+  transform: rotate(-45deg);
+}
+
+@media (hover: hover) {
+  .item input:hover+label>.meme {
+    max-height: 20vw;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .item:hover input~.meme {
+    max-height: 20vw;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .bayan-container:hover .icon {
+    visibility: visible;
+  }
+
+  .bayan-container:hover .item {
+    color: var(--color--font-accent);
+  }
+}
+
 
 @media (max-width: 820px) {
   body {
